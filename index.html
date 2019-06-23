@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content='width=device-width, initial-scale=1.0'>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="animations.css">
+	<title>	</title>
+</head>
+<body>
+	<header>
+	</header>
+	<div class="main flex-row ">
+			<div class="left-column">
+				<div class="left-column-nav flex-row ">
+					<div id="all-bets">Все ставки</div>
+					<div class="my-bets">Мои ставки</div>
+					<div id="winners">Победители</div>
+				</div>
+				<div class="left-column-info flex-column">
+					<div id="left-column-info2" class="flex-row">
+						
+					</div>
+				</div>	
+			</div>
+			<div class="central-column flex-column">
+				<div class="game-block">
+					<div class="rocket-animation-block">
+						<div class="rocket"></div>
+
+					</div>
+				</div>
+				<div class="bet-block">
+					<div class="left-bet-block flex-column">
+						<div class="headline"><h1>СТАВКА</h1></div>
+						<div class="bet-counter flex-row ">
+							<input type="text" size="25" value="500" id="count">
+							<div class="plus-minus-left flex-row ">
+								<input type="button" value="—" id="minus" onclick="minus()">
+								<input type="button" value="+" id="plus" onclick="plus()">
+							</div>
+						</div>
+						<div class="default-bets flex-row ">
+							<p>500</p>
+							<p>1000</p>
+							<p>5000</p>
+						</div>
+						<div class="auto flex-row ">
+							<p>Авто.вывод средств</p>
+							<div class="switch switch-left">
+								<input type="checkbox">
+							</div>
+						</div>
+					</div>	
+					<div class="right-bet-block flex-column">
+						<div class="auto-money">
+							<p>Автоматический вывод средств</p>
+							<div class="switch switch-right">
+								<input type="checkbox" checked="checked">
+							</div>
+						</div>
+						<div class="plus-minus-right flex-row ">
+							<input id="bet-counter-right" type="text" size="25" value="500">
+							<input type="button" value="—" id="minus-right" onclick="minus2()">
+							<input type="button" value="+" id="plus-right" onclick="plus2()">
+						</div>
+						<div class="bet-button"><button id="bet-button">СТАВКА</button></div>
+					</div>
+				</div>
+			</div>
+			<div class="right-column flex-column">
+				<div class="right-column-nav">
+					<div class="diagramm">Диаграмма</div>
+					<div class="history">История</div>
+					<div class="biggest">Наибольший</div>
+				</div>
+				<div class="right-column-info">
+				</div>
+
+				<div class="chat-block flex-column">					
+					<div class="chat-head">
+						<p>ЧАТ ОНЛАЙН</p>
+						<div id="open-chat" onclick="showHide()">&#9660</div>
+					</div>
+					<div id="chat-field" style="display: none;"></div>
+				</div>
+			</div>
+	</div>
+
+	 
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+				<!--<div id="template">
+					<div class="player">Игрок</div>
+						<div class="bet">Ставка</div>
+						<div class="coeff">Коэфф.</div>
+						<div class="win">Выигрыш</div>
+				</div>
