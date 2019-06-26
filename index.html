@@ -12,24 +12,121 @@
 	</header>
 		<div class="main flex-row ">
 			<div id="left-column">
-				<div id="left-column-nav" class="flex-row ">
-					<div id="all-bets" class="active">Все ставки</div>
-					<div id="my-bets">Мои ставки</div>
-					<div id="winners">Победители</div>
-				</div>
-				<div id="left-column-info" class="flex-column">
-					
-					
-					<div id="left-column-info-content">
-						
-					</div>
-				</div>	
+						<div id="tabs">
+							<div class="tab  active" >Все ставки</div>
+							<div class="tab ">Мои ставки</div>
+							<div class="tab ">Победители</div>
+							<div class="tabContent">
+								<div class="left-column-info-title flex-row">
+									<div class="player">Игрок</div>
+									<div class="bet">Ставка</div>
+									<div class="coeff">Коэфф.</div>
+									<div class="win">Выигрыш</div>
+								</div>
+								<div class="left-column-info-content flex-column">
+									<div class="l-c-content-line flex-row">
+										<div class="player-name">crocodil</div>
+										<div class="bet-value">100<span>UAH</span></div>
+										<div class="coeff-value">1.25x</div>
+										<div class="win-value">100<span>UAH</span></div>
+									</div>
+								</div>
+							</div>
+							<div class="tabContent">
+								<div class="left-column-info-title flex-row">
+									<div class="player">Дата</div>
+									<div class="bet">Ставка</div>
+									<div class="coeff">Коэфф.</div>
+									<div class="win">Выигрыш</div>
+								</div>
+								<div class="left-column-info-content flex-column">
+									<div class="l-c-content-line flex-row">
+										<div class="player-name">02.02.19</div>
+										<div class="bet-value">100<span>UAH</span></div>
+										<div class="coeff-value">1.25x</div>
+										<div class="win-value">100<span>UAH</span></div>
+									</div>
+								</div>
+							</div>
+							<div class="tabContent">
+								<div class="left-column-info-title flex-row">
+									<div class="top-wins">Top wins in last 24H</div>
+								</div>
+								<div class="winners-tmpl flex-row">
+									<div id="avatar" class="flex-column">
+										<div id="image"></div>
+										<div id="text">crocodil</div>
+									</div>
+									<div id="winners-info" class="flex-column">
+										<div id="bet-line" class="flex-row">
+											<div id="bet-title">Ставка</div>
+											<div id="bet-val">120UAH</div>
+										</div>
+										<div id="win-line" class="flex-row">
+											<div id="win-title">Выигрыш</div>
+											<div id="win-val">500UAH</div>
+										</div>
+										<div id="coeff-line" class="flex-row">
+											<div id="coeff-title">Ставка</div>
+											<div id="coeff-val">3.82x</div>
+										</div>
+									</div>
+									<div id="complete-logo"></div>
+								</div>
+
+								<div class="winners-tmpl flex-row">
+									<div id="avatar" class="flex-column">
+										<div id="image"></div>
+										<div id="text">crocodil</div>
+									</div>
+									<div id="winners-info" class="flex-column">
+										<div id="bet-line" class="flex-row">
+											<div id="bet-title">Ставка</div>
+											<div id="bet-val">120UAH</div>
+										</div>
+										<div id="win-line" class="flex-row">
+											<div id="win-title">Выигрыш</div>
+											<div id="win-val">500UAH</div>
+										</div>
+										<div id="coeff-line" class="flex-row">
+											<div id="coeff-title">Ставка</div>
+											<div id="coeff-val">3.82x</div>
+										</div>
+									</div>
+									<div id="complete-logo"></div>
+								</div>
+
+								<div class="winners-tmpl flex-row">
+									<div id="avatar" class="flex-column">
+										<div id="image"></div>
+										<div id="text">crocodil</div>
+									</div>
+									<div id="winners-info" class="flex-column">
+										<div id="bet-line" class="flex-row">
+											<div id="bet-title">Ставка</div>
+											<div id="bet-val">120UAH</div>
+										</div>
+										<div id="win-line" class="flex-row">
+											<div id="win-title">Выигрыш</div>
+											<div id="win-val">500UAH</div>
+										</div>
+										<div id="coeff-line" class="flex-row">
+											<div id="coeff-title">Ставка</div>
+											<div id="coeff-val">3.82x</div>
+										</div>
+									</div>
+									<div id="complete-logo"></div>
+								</div>
+							</div>
+						</div>	
 			</div>
 			<div class="central-column flex-column">
 				<div class="game-block">
 					<div class="rocket-animation-block">
+						<div id="page-preloader" class="preloader">
+							<div class="loader"></div>
+						</div>
 						<div class="rocket"></div>
-
 					</div>
 				</div>
 				<div class="bet-block">
@@ -116,10 +213,10 @@
 		
 	</div>
 
-<div class="winners-template flex-row">
-	<div class="left-column-info-title flex-row">
-	</div>
-	<div class="winners-tmpl flex-row" \>
+
+	
+
+	<div class="winners-tmpl flex-row">
 
 			<div id="avatar" class="flex-column">
 				<div id="image"></div>
@@ -141,43 +238,10 @@
 			</div>
 			<div id="complete-logo"></div>
 	</div>
-</div>
 
-	<div class="left-column-info-title flex-row">
-		<div class="player"></div>
-		<div class="bet"></div>
-		<div class="coeff"></div>
-		<div class="win"></div>	
-	</div>
 
-	<div class="content-line1 flex-row" >
-		<div class="player-name"></div>
-		<div class="bet-value"> <span>UAH</span></div>
-		<div class="coeff-value"><span id="pink"></span></div>
-		<div class="win-value"> <span>UAH</span></div>
-	</div>	
 
 	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
 
-
-
-
-<!--<div id="left-column-info" class="flex-column">
-					<div id="left-column-info-title" class="flex-row">
-						<div id="player">Игрок</div>
-						<div id="bet">Ставка</div>
-						<div id="coeff">Коэфф.</div>
-						<div id="win">Выигрыш</div>
-						
-					</div>
-					<div id="left-column-info-content">
-						<div id="content-line1" class=" flex-row">
-							<div id="player-name">crocodil</div>
-							<div id="bet-value">100 <span id='small-text'>UAH</span></div>
-							<div id="coeff-value"><span id="pink">1.25x</span></div>
-							<div id="win-value">100 <span>UAH</span></div>
-						</div>	
-					</div>
-				</div>	
