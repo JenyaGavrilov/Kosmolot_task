@@ -10,15 +10,17 @@
 <body>
 	<header>
 	</header>
-	<div class="main flex-row ">
-			<div class="left-column">
-				<div class="left-column-nav flex-row ">
-					<div id="all-bets">Все ставки</div>
-					<div class="my-bets">Мои ставки</div>
+		<div class="main flex-row ">
+			<div id="left-column">
+				<div id="left-column-nav" class="flex-row ">
+					<div id="all-bets" class="active">Все ставки</div>
+					<div id="my-bets">Мои ставки</div>
 					<div id="winners">Победители</div>
 				</div>
-				<div class="left-column-info flex-column">
-					<div id="left-column-info2" class="flex-row">
+				<div id="left-column-info" class="flex-column">
+					
+					
+					<div id="left-column-info-content">
 						
 					</div>
 				</div>	
@@ -31,28 +33,35 @@
 					</div>
 				</div>
 				<div class="bet-block">
-					<div class="left-bet-block flex-column">
-						<div class="headline"><h1>СТАВКА</h1></div>
-						<div class="bet-counter flex-row ">
-							<input type="text" size="25" value="500" id="count">
-							<div class="plus-minus-left flex-row ">
-								<input type="button" value="—" id="minus" onclick="minus()">
-								<input type="button" value="+" id="plus" onclick="plus()">
+					<div id="left-bet-block-cover" class="flex-column">
+						<div id="left-bet-block" class="flex-column">
+							<div class="headline"><h1>СТАВКА</h1></div>
+							<div class="bet-counter flex-row ">
+								<input type="text" size="25" value="500.00" id="count">
+								<div class="plus-minus-left flex-row ">
+									<div id="minus" onclick="minus()"><p>—</p></div>
+									<div id="plus" onclick="plus()"><p>+</p></div>
+								</div>
 							</div>
-						</div>
-						<div class="default-bets flex-row ">
-							<p>500</p>
-							<p>1000</p>
-							<p>5000</p>
-						</div>
-						<div class="auto flex-row ">
-							<p>Авто.вывод средств</p>
-							<div class="switch switch-left">
-								<input type="checkbox">
+							<div class="default-bets flex-row ">
+								<p id="default500">500</p>
+								<p id="default100">1000</p>
+								<p id="default5000">5000</p>
+							</div>
+							<div class="auto flex-row ">
+								<p>Авто.вывод средств</p>
+								<div class="switch switch-left">
+									<input type="checkbox">
+								</div>
 							</div>
 						</div>
 					</div>	
 					<div class="right-bet-block flex-column">
+						<div class="bet-popup-open flex-row">
+							<div id="popup-open-button">
+								+
+							</div>
+						</div>
 						<div class="auto-money">
 							<p>Автоматический вывод средств</p>
 							<div class="switch switch-right">
@@ -60,11 +69,13 @@
 							</div>
 						</div>
 						<div class="plus-minus-right flex-row ">
-							<input id="bet-counter-right" type="text" size="25" value="500">
-							<input type="button" value="—" id="minus-right" onclick="minus2()">
-							<input type="button" value="+" id="plus-right" onclick="plus2()">
+							<input id="bet-counter-right" type="text" size="25" value="500.00">
+							<div  id="minus-right" onclick="minus2()"><p>—</p></div>
+							<div  id="plus-right" onclick="plus2()"><p>+</p></div>
+							
 						</div>
 						<div class="bet-button"><button id="bet-button">СТАВКА</button></div>
+
 					</div>
 				</div>
 			</div>
@@ -85,11 +96,67 @@
 					<div id="chat-field" style="display: none;"></div>
 				</div>
 			</div>
+		</div>
+
+	<div class="bet-popup">
+		<div class="left-side-popup flex-row">
+			<div id="left-block-1" class="flex-column">
+				
+			</div>
+			<div id="left-block-2"></div>
+		</div>
+		<div class="right-side-popup">
+			<div class="right-block1"></div>
+
+			<div class="right-block-2"></div>
+		</div>
 	</div>
 
-	
+	<div class="all-bets-popup">
+		
+	</div>
 
-	 
+<div class="winners-template flex-row">
+	<div class="left-column-info-title flex-row">
+	</div>
+	<div class="winners-tmpl flex-row" \>
+
+			<div id="avatar" class="flex-column">
+				<div id="image"></div>
+				<div id="text"></div>
+			</div>
+			<div id="winners-info" class="flex-column">
+				<div id="bet-line" class="flex-row">
+					<div id="bet-title"></div>
+					<div id="bet-val"></div>
+				</div>
+				<div id="win-line" class="flex-row">
+					<div id="win-title"></div>
+					<div id="win-val"></div>
+				</div>
+				<div id="coeff-line" class="flex-row">
+					<div id="coeff-title"></div>
+					<div id="coeff-val"></div>
+				</div>
+			</div>
+			<div id="complete-logo"></div>
+	</div>
+</div>
+
+	<div class="left-column-info-title flex-row">
+		<div class="player"></div>
+		<div class="bet"></div>
+		<div class="coeff"></div>
+		<div class="win"></div>	
+	</div>
+
+	<div class="content-line1 flex-row" >
+		<div class="player-name"></div>
+		<div class="bet-value"> <span>UAH</span></div>
+		<div class="coeff-value"><span id="pink"></span></div>
+		<div class="win-value"> <span>UAH</span></div>
+	</div>	
+
 	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
@@ -97,10 +164,20 @@
 
 
 
-
-				<!--<div id="template">
-					<div class="player">Игрок</div>
-						<div class="bet">Ставка</div>
-						<div class="coeff">Коэфф.</div>
-						<div class="win">Выигрыш</div>
-				</div>
+<!--<div id="left-column-info" class="flex-column">
+					<div id="left-column-info-title" class="flex-row">
+						<div id="player">Игрок</div>
+						<div id="bet">Ставка</div>
+						<div id="coeff">Коэфф.</div>
+						<div id="win">Выигрыш</div>
+						
+					</div>
+					<div id="left-column-info-content">
+						<div id="content-line1" class=" flex-row">
+							<div id="player-name">crocodil</div>
+							<div id="bet-value">100 <span id='small-text'>UAH</span></div>
+							<div id="coeff-value"><span id="pink">1.25x</span></div>
+							<div id="win-value">100 <span>UAH</span></div>
+						</div>	
+					</div>
+				</div>	
