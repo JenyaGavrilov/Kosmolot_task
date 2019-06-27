@@ -106,7 +106,7 @@ var parent = document.getElementById('left-bet-block');
 function progress () {
 	var elem = document.getElementById('progress-line');
 		width = 1;
-		id = setInterval(progressStatus, 50); 
+		id = setInterval(progressStatus, 70); 
 		function progressStatus () {
 			if (width >= 100) {
 				clearInterval(id);
@@ -121,7 +121,7 @@ function progress () {
 progress()
 
 
-var timePeriodInMs = 5000;
+var timePeriodInMs = 6000;
 
 setTimeout(function() 
 { 
@@ -132,7 +132,15 @@ timePeriodInMs);
 
 
 
-
+var timeleft = 5;
+var downloadTimer = setInterval(function(){
+  document.getElementsByClassName("timer")[0].innerHTML = timeleft + ' .sec'
+  timeleft -= 1;
+  if(timeleft <= 0){
+    clearInterval(downloadTimer);
+  
+  }
+}, 1000	);
 
 
 
