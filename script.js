@@ -103,6 +103,32 @@ var parent = document.getElementById('left-bet-block');
 
 
 
+function progress () {
+	var elem = document.getElementById('progress-line');
+		width = 1;
+		id = setInterval(progressStatus, 50); 
+		function progressStatus () {
+			if (width >= 100) {
+				clearInterval(id);
+			}
+			else {
+				width++;
+				elem.style.width = width + '%';
+			}
+		}
+}
+
+progress()
+
+
+var timePeriodInMs = 5000;
+
+setTimeout(function() 
+{ 
+    document.getElementsByClassName("preloader")[0].classList.add('done');
+    document.getElementsByClassName("preloader")[0].classList.add('disactive');
+}, 
+timePeriodInMs);
 
 
 

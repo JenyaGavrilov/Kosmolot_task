@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content='width=device-width, initial-scale=1.0'>
+	<meta name="viewport" content='width=device-width, initial-scale=1.0'>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="animations.css">
 	<title>	</title>
@@ -123,8 +124,13 @@
 			<div class="central-column flex-column">
 				<div class="game-block">
 					<div class="rocket-animation-block">
-						<div id="page-preloader" class="preloader">
+						<div class="preloader flex-column">
 							<div class="loader"></div>
+							<div class="loader-text">ЖДИТЕ СЛЕДУЮЩЕГО РАУНДА</div>
+							<div class="progress-line-bg">
+								<div class="progress-line" id="progress-line"></div>
+							</div>
+							<div class="timer"></div>
 						</div>
 						<div class="rocket"></div>
 					</div>
