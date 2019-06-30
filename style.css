@@ -80,12 +80,13 @@ header {
 	background-image: url("images/rocket.png");
 	background-size: 70%;
 	background-repeat: no-repeat;
-	width: 180px;
-	height: 100px;
+	width: 150px;
+	height: 80px;
 	position: relative;
-	top: 335px;
-	-webkit-animation: flight 5s 2 linear;
-	        animation: flight 5s 2 linear;
+	bottom: 18%;
+	right: 1%;
+	
+
 }
 
 .bet-block {
@@ -989,18 +990,41 @@ display: block;
 	
 }
 
-
-
 .done { 
 	opacity: 0;
 	visibility: hidden;
  }
 
-@keyframes spin {
+ .svg-element {
+ 	position: relative;
+ 	width: 100%;
+ 	height:100%
+ }
+
+ .path {
+	stroke-dasharray: 1050;
+  	stroke-dashoffset: 1050;
+  	animation: dash 6.5s linear forwards;
+
+  
+    
+}
+
+@keyframes dash {
 	from {
-		transform: translate (-50%, -50%) rotate(0deg);
+		stroke-dashoffset: 1050;
 	}
 	to {
-		transform: translate(-50%,-50%) rotate(360deg);
+		stroke-dashoffset: 0;
 	}
+}
+
+@keyframes shake {
+	50% {
+		transform: rotate(-1deg);
+	}
+
+	100% {
+		transform: rotate(1deg);
+}
 }

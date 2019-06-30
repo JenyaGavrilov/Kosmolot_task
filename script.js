@@ -105,14 +105,14 @@ var parent = document.getElementById('left-bet-block');
 
 function progress () {
 	var elem = document.getElementById('progress-line');
-		width = 1;
+		width = 100;
 		id = setInterval(progressStatus, 40); 
 		function progressStatus () {
-			if (width >= 100) {
+			if (width == 0) {
 				clearInterval(id);
 			}
 			else {
-				width++;
+				width--;
 				elem.style.width = width + '%';
 			}
 		}
@@ -147,4 +147,35 @@ timePeriodInMs);
          document.getElementsByClassName("timer")[0].innerHTML = count /100 ; 
      }
 
+setTimeout(animate, 5830);
 
+
+
+
+ function animate () {
+    var flightPath = {
+     	curviness: 1.25,
+     	autoRotate: false,
+     	values: [{x: 5, y: 0 }, {x:200, y: -35}, {x:250, y:-50}, {x:300, y: -65}, {x:350, y: -85}, {x:500, y: -155}, {x:638, y: -255}]
+     };
+
+     var tween = new TimelineLite();
+
+     tween.add(
+     		TweenLite.to('.rocket',5,  {
+     			bezier: flightPath,
+     			ease: Power0.easeInOut,
+     			delat: 6
+     		}) 
+    );
+ }
+
+
+ 
+
+ setTimeout(display, 4000);
+
+ function display () {
+ 	var svgElement = document.getElementsByClassName('svg-element')[0].classList.remove('disactive');
+ 	var rocket = document.getElementsByClassName('rocket')[0].classList.remove('disactive');
+ };
