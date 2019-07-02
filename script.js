@@ -147,7 +147,7 @@ timePeriodInMs);
          document.getElementsByClassName("timer")[0].innerHTML = count /100 ; 
      }
 
-setTimeout(animate, 5830);
+setTimeout(animate, 4950);
 
 
 
@@ -155,17 +155,16 @@ setTimeout(animate, 5830);
  function animate () {
     var flightPath = {
      	curviness: 1.25,
-     	autoRotate: false,
-     	values: [{x: 5, y: 0 }, {x:200, y: -35}, {x:250, y:-50}, {x:300, y: -65}, {x:350, y: -85}, {x:500, y: -155}, {x:638, y: -255}]
+     	values: [{x: 0, y: 0 }, {x: 100, y: -17 }, {x:200, y: -35}, {x:250, y:-46}, {x:300, y: -61}, {x:350, y: -80}, {x:500, y: -140}, {x:650, y: -250}]
      };
 
      var tween = new TimelineLite();
 
      tween.add(
-     		TweenLite.to('.rocket',5,  {
+     		TweenLite.to('.rocket',5.2,  {
      			bezier: flightPath,
-     			ease: Power0.easeInOut,
-     			delat: 6
+     			ease: Power0.easeInOut
+     			
      		}) 
     );
  }
@@ -173,7 +172,7 @@ setTimeout(animate, 5830);
 
  
 
- setTimeout(display, 4000);
+ setTimeout(display, 3000);
 
  function display () {
  	var svgElement = document.getElementsByClassName('svg-element')[0].classList.remove('disactive');
