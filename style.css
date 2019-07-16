@@ -1015,14 +1015,18 @@ display: block;
 	position: absolute;
 }
 
-.outerWrapper svg path {
+#trajectory {
 	fill:none; 
 	stroke:#ffd56c;
-	stroke-width:5; 
+	stroke-width:6; 
 	stroke-dasharray: 1050;
   	stroke-dashoffset: 1050;
-  	-webkit-animation: dash 5.9s linear 4s forwards;
-  	 animation: dash 5.9s linear 4s forwards; 	
+  	-webkit-animation: dash 5.95s linear 4s forwards;
+  	 animation: dash 5.95s linear 4s forwards; 	
+}
+
+#shadow {
+	fill: #ff5b41;
 }
 
 
