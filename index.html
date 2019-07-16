@@ -132,12 +132,29 @@
 							</div>
 							<div class="timer">	</div>	
 						</div>
-						<svg  class = "svg-element disactive"   viewBox="0 0 775 450" >
-							<path  class="path" d="M-300 472 Q 400 443 647 200" stroke="#ffd56c" fill="transparent" stroke-width = "8"/>
-							<path   d="M-350 478 Q 400 450 650 200  l0 500 Z"  fill= "#ff5b41" stroke-width = "1"/>
-						</svg>
+						<div class="outerWrapper " id="outerWrapper">
 
-						<div class="rocket disactive"></div>
+							<svg version="1.1" class="svgEl"   x="0px" y="0px"
+							 width="100%" height="100%" viewBox="0 0 790 440">
+
+							 <defs>
+							 	<pattern id="polka-dots" x="-30" y="-40" width="150" height="100" patternUnits="userSpaceOnUse" patternTransform="translate(20 70) scale(1.3)" >
+							 		<image x="15" y="15" height="100" width="100"  xlink:href="images/rocket.png"></image>
+							 	</pattern>
+							 </defs>		
+							 
+							<path d="M0, 355 C300, 320, 399, 320, 600, 120" />
+ 
+							 
+							<rect  x="10" y="-100" width="190" height="120" fill="url(#polka-dots)"/>
+							
+							
+							
+							</svg>
+       
+						</div>
+
+					
 					</div>
 				</div>
 				<div class="bet-block">
@@ -218,7 +235,7 @@
 
 	<div class="all-bets-popup">	
 	</div>
-
+	<script src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js" integrity="sha256-VV47uJSoHZUeiBcCs3FcBOQLMn++yeG/zqZvaUkvGZM=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js" integrity="sha256-nuhNsfXzBFR6G1lKP8bK77dakkQDqdHcQ4OCFZvk6Qo=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js" integrity="sha256-LBjlnpPrM6Aig8LDFc9PJctPHLGUc6RaUvnmXE4hV5Y=" crossorigin="anonymous"></script>

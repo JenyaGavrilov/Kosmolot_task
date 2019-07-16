@@ -147,34 +147,71 @@ timePeriodInMs);
          document.getElementsByClassName("timer")[0].innerHTML = count /100 ; 
      }
 
-setTimeout(animate, 4950);
 
 
 
+ setTimeout(display, 4000);
 
- function animate () {
-    var flightPath = {
-     	curviness: 1.25,
-     	values: [{x: 0, y: 0 }, {x: 100, y: -17 }, {x:200, y: -35}, {x:250, y:-46}, {x:300, y: -61}, {x:350, y: -80}, {x:500, y: -140}, {x:650, y: -250}]
-     };
+function display () {
+  var outerWrapper = document.getElementsByClassName('svgEl')[0].classList.remove('disactive');
+}
 
-     var tween = new TimelineLite();
+var rocketFlight = function() {
 
-     tween.add(
-     		TweenLite.to('.rocket',5.2,  {
-     			bezier: flightPath,
-     			ease: Power0.easeInOut
-     			
-     		}) 
-    );
- }
+var counterSvg = 0;
+
+/*  A boolean variable to keep track of the direction we want to travel in 
+  true = move to the left, false move to the right */
+var direction = true;
+
+/*  First get a reference to the enclosing div and then to
+  the 2 svg paths */
+var svgContainer = document.getElementById("outerWrapper");
+var ns = "http://www.w3.org/2000/svg";
+var svg = svgContainer.getElementsByTagNameNS(ns, "path");
+/*  the var 'svg' contains a reference to two paths so svg.length = 2
+  svg[0] is the straight line and svg[1] is the curved lines */
+
+/*  Now get the length of those two paths */
+
+var curveLength = svg[0].getTotalLength();
+
+/*  Also get a reference to the two star polygons */
+
+var rockets = svgContainer.querySelector("rect");
+
+setTimeout(moveStar,4000)
 
 
- 
+function moveStar() {
+  /*  Check to see where the stars are journeys to determibne 
+    what direction they should be travelling in */
+  if (parseInt(counterSvg,10) === 1) {
+    /* we've hit the end! */
+    direction = false;
+  } else if (parseInt(counterSvg,10) < 0) {
+    /* we're back at the start! */
+    direction = true;
+  }
 
- setTimeout(display, 3000);
+  /*  Based on the direction variable either increase or decrease the counter */
+  if (direction) {
+    counterSvg += 0.0045;
+  } 
 
- function display () {
- 	var svgElement = document.getElementsByClassName('svg-element')[0].classList.remove('disactive');
- 	var rocket = document.getElementsByClassName('rocket')[0].classList.remove('disactive');
- };
+  /*  Now the magic part. We are able to call .getPointAtLength on the tow paths to return 
+    the coordinates at any point along their lengths. We then simply set the stars to be positioned 
+    at these coordinates, incrementing along the lengths of the paths */
+  
+  rockets.setAttribute("transform","translate("+ (svg[0].getPointAtLength(counterSvg * curveLength).x -15)  + "," + (svg[0].getPointAtLength(counterSvg * curveLength).y -15) + ")");
+  /*  Use requestAnimationFrame to recursively call moveStar() 60 times a second
+    to create the illusion of movement */
+  requestAnimationFrame(moveStar);
+}
+requestAnimationFrame(moveStar);
+
+}
+
+setTimeout(rocketFlight, 4000);
+
+/*-------------------------------------------------------------------*/

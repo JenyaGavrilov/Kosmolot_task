@@ -76,7 +76,6 @@ header {
 	border-top-style: none;
 	margin-left: 15px;
 	overflow: hidden;
-
 }
 
 
@@ -84,8 +83,8 @@ header {
 	background-image: url("images/rocket.png");
 	background-size: 70%;
 	background-repeat: no-repeat;
-	width: 190px;
-	height: 100px;
+	width: 140px;
+	height: 80px;
 	position: relative;
 	bottom:22%;
 	right: 1%;
@@ -476,7 +475,8 @@ input:checked[type="checkbox"]:before {
 }
 
 #popup-open-button {
-	align-self: center;
+	-ms-grid-row-align: center;
+	    align-self: center;
 	width: 25px;
 	height: 25px;
 	background-color: #2a105a;
@@ -491,7 +491,8 @@ input:checked[type="checkbox"]:before {
 }
 
 #popup-open-button:hover {
-	filter: brightness(1.1);
+	-webkit-filter: brightness(1.1);
+	        filter: brightness(1.1);
 }
 
 #left-column-nav {
@@ -628,7 +629,8 @@ input:checked[type="checkbox"]:before {
 }
 
 .content-line1 > div {
-	align-self: center;
+	-ms-grid-row-align: center;
+	    align-self: center;
 	color: white;
 	font-family: "Roboto-Light";
 }
@@ -951,7 +953,8 @@ display: block;
 .loader {
 	width: 200px;
 	height: 200px;
-	align-self: center;
+	-ms-grid-row-align: center;
+	    align-self: center;
 	background-image: url(images/Spinner-1s-200px.svg);
 	background-repeat: no-repeat;
 	background-size: 95%;
@@ -961,14 +964,16 @@ display: block;
 	font-family: "Roboto-Medium";
 	font-size: 23px;
 	color: white;
-	align-self: center;
+	-ms-grid-row-align: center;
+	    align-self: center;
 
 }
 
 .progress-line-bg {
 	height: 10px;
 	overflow: hidden;
-	align-self: center;
+	-ms-grid-row-align: center;
+	    align-self: center;
 	width: 30%;
 	padding-top: 20px;
 	margin: 0 auto;
@@ -984,11 +989,9 @@ display: block;
 }
 
 .timer {
-	align-self: center;
+	-ms-grid-row-align: center;
+	    align-self: center;
 	width: 50px;
-	height: 40px;
-	margin-top: 20px;
-	box-sizing: border-box;
 	color: white;
 	font-family: "Roboto-Regular";
 	font-size: 18px;
@@ -998,19 +1001,41 @@ display: block;
 .done { 
 	opacity: 0;
 	visibility: hidden;
- }
+	height: 40px;
+	margin-top: 20px;
+	box-sizing: border-box; }
 
+.outerWrapper {
+	width: 800px;
+	height: 600px;
+	position: relative;
+}
 
- .path {
+.outerWrapper svg {
+	position: absolute;
+}
+
+.outerWrapper svg path {
+	fill:none; 
+	stroke:#ffd56c;
+	stroke-width:5; 
 	stroke-dasharray: 1050;
   	stroke-dashoffset: 1050;
-  	animation: dash 6.7s linear forwards;
+  	-webkit-animation: dash 5.9s linear 4s forwards;
+  	 animation: dash 5.9s linear 4s forwards; 	
 }
 
-.svg-element {
-	position: relative;
-	bottom: 0;
+
+@-webkit-keyframes dash {
+	from {
+		stroke-dashoffset: 1050;
+	}
+	to {
+		stroke-dashoffset: 0;
+	}
 }
+
+
 
 
 
@@ -1023,12 +1048,15 @@ display: block;
 	}
 }
 
-@keyframes shake {
+@-webkit-keyframes shake {
 	50% {
-		transform: rotate(-1deg);
+		-webkit-transform: rotate(-1deg);
+		        transform: rotate(-1deg);
 	}
 
 	100% {
-		transform: rotate(1deg);
+		-webkit-transform: rotate(1deg);
+		        transform: rotate(1deg);
 }
 }
+
