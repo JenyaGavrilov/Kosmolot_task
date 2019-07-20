@@ -178,9 +178,9 @@ var curveLength = svg[0].getTotalLength();
 
 /*  Also get a reference to the two star polygons */
 
-var rockets = svgContainer.querySelector("rect");
+var rockets = svgContainer.querySelector("#rocketRect");
 
-setTimeout(moveStar,4000)
+setTimeout(moveStar,5000)
 
 
 function moveStar() {
