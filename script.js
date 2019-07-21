@@ -153,7 +153,8 @@ timePeriodInMs);
  setTimeout(display, 4000);
 
 function display () {
-  var outerWrapper = document.getElementsByClassName('svgEl')[0].classList.remove('disactive');
+  var verticalLine = document.getElementsByClassName('vertical-anim-line')[0].classList.remove('disactive');
+  var horizontalLine = document.getElementsByClassName('horizontal-anim-line')[0].classList.remove('disactive');
 }
 
 var rocketFlight = function() {

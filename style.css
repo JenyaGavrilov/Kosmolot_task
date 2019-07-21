@@ -62,9 +62,8 @@ header {
 	display: flex;
 	justify-content: center;
 	overflow: hidden;
+	flex-wrap: wrap;
 }
-
-
 
 .rocket-animation-block {
 	width: 95%;
@@ -942,7 +941,7 @@ display: block;
 	position: relative;
 	margin: 0 auto;
 	width: 90%;
-	height: 95%;
+	height: 100%;
 	background-color: #180732;
 	z-index: 2;
 	transition: 1s all;
@@ -1002,7 +1001,52 @@ display: block;
 	visibility: hidden;
 	height: 40px;
 	margin-top: 20px;
-	box-sizing: border-box; }
+	box-sizing: border-box; 
+}
+
+.vertical-anim-line {
+	width: 2%;
+	height: 475px;
+	left: 10px;
+	top:5px;
+	position: relative;
+}
+
+
+
+.st1 {
+	fill:none;
+	stroke: #e4307a;
+	stroke-width:4px;
+	stroke-linecap: round;
+	stroke-miterlimit:20;
+}
+
+.st2 {
+	fill:none;
+	stroke: #3f53c1;
+	stroke-width:6px;
+	stroke-linecap: round;
+	stroke-miterlimit:20;
+}
+
+.dashed-line  {
+  stroke-dasharray: 1, 60;
+}
+
+.dashed-line2  {
+  stroke-dasharray: 1, 120;
+}
+
+.dash-move-opposite {
+  -webkit-animation: dash-animation-opposite 60s infinite linear;
+          animation: dash-animation-opposite 60s infinite linear;
+}
+
+.dash-move {
+  -webkit-animation: dash-animation 60s infinite linear;
+          animation: dash-animation 60s infinite linear;
+}
 
 .outerWrapper {
 	width: 100%;
@@ -1014,29 +1058,90 @@ display: block;
 	position: relative;
 }
 
+.horizontal-anim-line {
+	position: relative;
+	bottom: 5px;
+	left: 12px;
+	width: 795px;
+	height: 10px;
+}
+
 #trajectory {
 	fill:none; 
 	stroke:#ffd56c;
 	stroke-width:6; 
 	stroke-dasharray: 1050;
   	stroke-dashoffset: 1050;
-    animation: changePath 7s linear 10s infinite,
-    dash 7.8s linear 4s forwards; 
+    -webkit-animation: changePath 7s linear 10s infinite,
+    dash 8s linear 4.1s forwards;
+            animation: changePath 7s linear 10s infinite,
+    dash 8s linear 4.1s forwards; 
     overflow: hidden;
 }
 
 #shadow {
-	animation: clippedPathMove 7s linear 10s infinite;
+	-webkit-animation: clippedPathMove 7s linear 10s infinite;
+	        animation: clippedPathMove 7s linear 10s infinite;
 }
 
 
 #clippedRect {
-	animation: clipping 7s linear 10s infinite;
+	-webkit-animation: clipping 7s linear 10s infinite;
+	        animation: clipping 7s linear 10s infinite;
 }
 
 #shadowMain {
 	fill: red;
-	animation: shadowMask 7s 4s forwards ;
+	-webkit-animation: shadowMask 7s 4s forwards ;
+	        animation: shadowMask 7s 4s forwards ;
+}
+
+
+@-webkit-keyframes dash-animation-opposite {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
+
+
+@-webkit-keyframes dash-animation {
+  to {
+    stroke-dashoffset: 1000;
+  }
+}
+
+
+@keyframes dash-animation {
+  to {
+    stroke-dashoffset: 1000;
+  }
+}
+
+@keyframes dash-animation-opposite {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
+
+@-webkit-keyframes clipping {
+  0% {
+  	width: 600px;
+}
+25% {
+	width: 700px;
+}
+
+50% {
+	width: 600px; 
+}
+
+75% {
+	width: 600px;
+}
+
+100% {
+	width: 600px;
+}
 }
 
 @keyframes clipping {
@@ -1060,6 +1165,29 @@ display: block;
 }
 }
 
+@-webkit-keyframes  clippedPathMove {
+	0% {
+		d: path('M-10, 440 C300, 423, 399, 400, 600, 200 V600, 440  Z');
+	}
+
+	25% {
+		d: path('M-10, 440 C300, 423, 399, 400, 620, 220 V640, 460  Z');
+	}
+	
+	50% {
+		d: path('M-10, 440 C300, 423, 399, 400, 600, 200 V600, 440  Z');
+	}
+
+	75% {
+		d: path('M-10, 440 C300, 423, 399, 400, 580, 180 V600, 440  Z');
+	}
+
+	100% {
+		d: path('M-10, 440 C300, 423, 399, 400, 600, 200 V600, 440  Z');
+	}
+
+}
+
 @keyframes  clippedPathMove {
 	0% {
 		d: path('M-10, 440 C300, 423, 399, 400, 600, 200 V600, 440  Z');
@@ -1079,6 +1207,29 @@ display: block;
 
 	100% {
 		d: path('M-10, 440 C300, 423, 399, 400, 600, 200 V600, 440  Z');
+	}
+
+}
+
+@-webkit-keyframes changePath {
+	0% {
+		d: path('M0, 437 C300, 420, 399, 395, 570, 225');
+	}
+
+	25% {
+		d:path('M0, 437 C300, 420, 399, 395, 580, 250');
+	}
+
+	50% {
+		d: path('M0, 437 C300, 420, 399, 395, 570, 225');
+	}
+
+	75% {
+		d: path('M0, 437 C300, 420, 399, 395, 560, 200');
+	}
+
+	100% {
+		d: path('M0, 437 C300, 420, 399, 395, 570, 225');
 	}
 
 }
@@ -1108,6 +1259,17 @@ display: block;
 
 
 
+@-webkit-keyframes dash {
+	from {
+		stroke-dashoffset: 1050;
+	}
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+
+
 @keyframes dash {
 	from {
 		stroke-dashoffset: 1050;
@@ -1117,3 +1279,4 @@ display: block;
 	}
 }
 
+}
