@@ -180,10 +180,10 @@ var curveLength = svg[0].getTotalLength();
 
 var rockets = svgContainer.querySelector("#rocketRect");
 
-setTimeout(moveStar,5000)
+setTimeout(moveRocket,5000)
 
 
-function moveStar() {
+function moveRocket() {
   /*  Check to see where the stars are journeys to determibne 
     what direction they should be travelling in */
   if (parseInt(counterSvg,10) === 1) {
@@ -196,7 +196,7 @@ function moveStar() {
 
   /*  Based on the direction variable either increase or decrease the counter */
   if (direction) {
-    counterSvg += 0.0045;
+    counterSvg += 0.0035;
   } 
 
   /*  Now the magic part. We are able to call .getPointAtLength on the tow paths to return 
@@ -204,11 +204,11 @@ function moveStar() {
     at these coordinates, incrementing along the lengths of the paths */
   
   rockets.setAttribute("transform","translate("+ (svg[0].getPointAtLength(counterSvg * curveLength).x -15)  + "," + (svg[0].getPointAtLength(counterSvg * curveLength).y -15) + ")");
-  /*  Use requestAnimationFrame to recursively call moveStar() 60 times a second
+  /*  Use requestAnimationFrame to recursively call moveRocket() 60 times a second
     to create the illusion of movement */
-  requestAnimationFrame(moveStar);
+  requestAnimationFrame(moveRocket);
 }
-requestAnimationFrame(moveStar);
+requestAnimationFrame(moveRocket);
 
 }
 
