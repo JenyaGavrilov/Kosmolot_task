@@ -21,14 +21,187 @@ body{
 }
 
 header {
-	height: 10px;
-	background: url(images/transparent-background.png) no-repeat;	
+	height: 12vh;
+	background: url(images/transparent-background.png) no-repeat;
+	width: 100%;
+	margin: 0 auto;	
+	justify-content: space-between;
+}
+
+#logo-block,
+#player-info-block
+ {
+	width: 33%;
+}
+#logo-block {
+	justify-content: space-between;
+}
+
+#logo,
+#clear-game {
+	width: 49%;
+}
+
+#logo {
+	background: url(images/cosmolot-logo.png)no-repeat 50% 50%;
+	background-size: 80%;
+}
+
+#clear-game {
+	justify-content: center;
+}
+
+#clear-game-button {
+	width: 85%;
+	height: 35%;
+	border: 1px solid #2a105a;
+	border-radius: 15px;
+	background-color: #1b0a3a;
+	-ms-grid-row-align: center;
+	    align-self: center;
+	cursor: pointer;
+}
+
+#clear-game-button:hover {
+	background-color: #180945;
+
+}
+
+#clear-game-button p {
+	font-family: "Roboto-Light";
+    font-size: 11px;
+    color: white;
+    text-align: center;
+    width: 80%;
+    box-sizing: border-box;
+    line-height: 1;
+}
+
+#clear-game-button div {
+	width: 20%;
+	background: url(images/security.png) no-repeat 0% 50%;
+	background-size: 40%;
+}
+
+#cosmo-bet-block {
+	width: 36%;
+	justify-content: center;
+}
+
+#cosmo-bet-button {
+	-ms-grid-row-align: center;
+	    align-self: center;
+	    width: 30%;
+	    height: 60%;
+	    border: 1px solid #384eba;
+	    justify-content: space-around;
+	    background-color: #223e9b;
+	    border-radius: 10px;
+}
+
+#cosmo-bet-button:hover {
+	background-color: #223e8a;
+	cursor: pointer;
+}
+
+#cosmo-bet-button div {
+	height: 35%;
+	color: white;
+	font-family: "Roboto-Light";
+    font-weight: 600;
+    font-size: 13px;
+    text-align: center;
+}
+
+#cosmo-bet-button .text {
+	box-sizing: border-box;
+	padding-top: 5px;
+} 
+
+#player-info-block {
+	justify-content: space-around;
+}
+
+#player-info-block > div {
+	-ms-grid-row-align: center;
+	    align-self: center;
+	width: 32%;
+	height: 35%;
+}
+
+.player-cash-block {
+	width: 30%;
+	height: 90%;
+	background-color: #2a105a;
+	border-radius: 30px;
+	color: white;
+}
+
+#player-cash-value {
+	width: 80%;
+	text-align: center;
+	box-sizing: border-box;
+	padding-top: 10px;
+	font-family: "Roboto-Light";
+    font-size: 11px;
+}
+
+.add-player-money {
+	width: 14%;
+	height: 65%;
+	-ms-grid-row-align: center;
+	    align-self: center;
+	background: #e4307a;
+	margin-left: 5px;
+	box-sizing: border-box;
+	border-radius: 50%;
+	color: #2a105a;
+	text-align: center;
+	line-height: 1.25;
+	font-family: "Roboto-Regular";
+	font-weight: 300;
+	font-size: 18px;
+}
+
+.add-player-money:hover {
+	cursor: pointer;
+}
+
+.player-login-block {
+
+}
+
+.player-logo {
+	width: 40%;
+	height: 100%;
+	background: url("images/mask.png") no-repeat 90% 60%;
+	background-size: 60%;
+	
+}
+
+.player-login {
+	width: 60%;
+	font-family: "Roboto-Light";
+    font-size: 11px;
+    color: white;
+    text-align: left;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-left:  2px;
+}
+
+#open-profile {
+	cursor: pointer;
+	position: relative;
+	top: -7px;
+	left: 10px;	
+	font-size: 8px;
 }
 
 .main {
 	background: url(images/transparent-background.png) no-repeat;	
 	width: 100%;
-	height: 100vh;
+	height: 88vh;
 	margin: 0 auto;
 	justify-content: space-between;
 	overflow: hidden;
@@ -44,12 +217,12 @@ header {
 
 .central-column {
 	margin-left: -5px;
-	margin-top: 20px;
-	width: 55%;
+	width: 53%;
 	min-width: 500px;
-	height: 98%;
+	height: 97%;
 	justify-content: space-between;
 	margin-left: 0;
+	margin-top: 15px;
 
 	
 }
@@ -67,7 +240,7 @@ header {
 
 .rocket-animation-block {
 	width: 95%;
-	height: 88%;
+	height: 82%;
 	border: 1.5px solid #240d4c;
 	-ms-grid-row-align: center;
 	    align-self: center;
@@ -78,19 +251,6 @@ header {
 }
 
 
-.rocket {
-	background-image: url("images/rocket.png");
-	background-size: 70%;
-	background-repeat: no-repeat;
-	width: 140px;
-	height: 80px;
-	position: relative;
-	bottom:22%;
-	right: 1%;
-
-
-
-}
 
 .bet-block {
 	width: 600px;
@@ -98,9 +258,9 @@ header {
 	border: 1px solid #2a105a;
 	border-radius: 20px;
 	background-color: #180732;
-	height: 187px;
+	height: 170px;
 	display: flex;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 
 }
 
@@ -315,7 +475,7 @@ h1 {
 
 .switch {
 	position: relative;
-	top: 20px;
+	top: 17px;
 	left: 30px;
 	-webkit-transform: translate(-50%, -50%);
 	        transform: translate(-50%, -50%);
@@ -411,9 +571,7 @@ input:checked[type="checkbox"]:before {
 	margin-top: -54px;
 	margin-left: 32px;
 	width: 245px;
-
 }
-
 
 
 .plus-minus-right:hover {
@@ -735,7 +893,7 @@ input:checked[type="checkbox"]:before {
 
 .chat-block {
 	position: relative;
-	top: 15%;
+	top: 0;
 	width: 98%;
 	height: 32%;
 	margin-top: 20px;
@@ -786,10 +944,7 @@ input:checked[type="checkbox"]:before {
 	font-size: 12px;
 	cursor: pointer;
 	text-align: center;
-
 }
-
-
 
 .top-wins {
 	font-family: 'Roboto-Regular';
@@ -993,7 +1148,7 @@ display: block;
 	width: 50px;
 	color: white;
 	font-family: "Roboto-Regular";
-	font-size: 18px;
+	font-size: 18px;font-size
 }
 
 .done { 
@@ -1007,8 +1162,8 @@ display: block;
 .vertical-anim-line {
 	width: 2%;
 	height: 475px;
-	left: 10px;
-	top:5px;
+	left: 1%;
+	top:-50px;
 	position: relative;
 }
 
@@ -1052,6 +1207,7 @@ display: block;
 	width: 100%;
 	height: 100%;
 	position: relative;
+	left: -48px;
 }
 
 .outerWrapper svg {
@@ -1060,8 +1216,8 @@ display: block;
 
 .horizontal-anim-line {
 	position: relative;
-	bottom: 5px;
-	left: 12px;
+	bottom: 9%;
+	left: 28px;
 	width: 795px;
 	height: 10px;
 }

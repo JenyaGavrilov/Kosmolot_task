@@ -53,14 +53,17 @@ function showTabsContent (b) {
 
 var count = 0;
   	countEl = document.getElementById("count");
-    function plus(){
+    cosmoBet = document.getElementById('numbers');
+      function plus(){
         count++;
         countEl.value = 500 + count * 100 + '.00';
+        cosmoBet.innerHTML = countEl.value + " UAH";
     }
     function minus(){
       if (count >= 1) {
         count--;
         countEl.value = 500 + count*100 + '.00';
+        cosmoBet.innerHTML = countEl.value + " UAH";
       }  
     }
 
