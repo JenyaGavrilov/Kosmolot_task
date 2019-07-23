@@ -1,50 +1,181 @@
-/*@keyframes move {
-
-	0% {
-		top:0;
-	}
-	100% {
-		top:100px;
-	}
-	
+@-webkit-keyframes dash-animation-opposite {
+  to {
+    stroke-dashoffset: -1000;
+  }
 }
 
-@keyframes flight {
 
-	0% { 
-		top: 400px;
-		left: 0;
-		;
+@-webkit-keyframes dash-animation {
+  to {
+    stroke-dashoffset: 1000;
+  }
+}
 
+
+@keyframes dash-animation {
+  to {
+    stroke-dashoffset: 1000;
+  }
+}
+
+@keyframes dash-animation-opposite {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
+
+@-webkit-keyframes clipping {
+  0% {
+  	width: 600px;
+}
+25% {
+	width: 700px;
+}
+
+50% {
+	width: 600px; 
+}
+
+75% {
+	width: 600px;
+}
+
+100% {
+	width: 600px;
+}
+}
+
+@keyframes clipping {
+  0% {
+  	width: 600px;
+}
+25% {
+	width: 700px;
+}
+
+50% {
+	width: 600px; 
+}
+
+75% {
+	width: 600px;
+}
+
+100% {
+	width: 600px;
+}
+}
+
+@-webkit-keyframes  clippedPathMove {
+	0% {
+		d: path('M-10, 440 C300, 423, 399, 400, 600, 200 V600, 440  Z');
 	}
 
-	20% {
-		top: 350px;
-		left: 100px;
-		
+	25% {
+		d: path('M-10, 440 C300, 423, 399, 400, 620, 220 V640, 460  Z');
+	}
+	
+	50% {
+		d: path('M-10, 440 C300, 423, 399, 400, 600, 200 V600, 440  Z');
 	}
 
-	40% {
-		top: 300px;
-		left: 150px;
-	}
-
-	60% {
-	 top: 250px;
-	left: 200px;
-	transform: rotate(15deg)
-
-	}
-
-	80% {
-		top: 200px;
-		left: 250px;
-		transform: rotate(15deg)
+	75% {
+		d: path('M-10, 440 C300, 423, 399, 400, 580, 180 V600, 440  Z');
 	}
 
 	100% {
-		top: 150px;
-		left: 300px;
-		transform: rotate(15deg)
+		d: path('M-10, 440 C300, 423, 399, 400, 600, 200 V600, 440  Z');
+	}
+
+}
+
+@keyframes  clippedPathMove {
+	0% {
+		d: path('M-10, 440 C300, 423, 399, 400, 600, 200 V600, 440  Z');
+	}
+
+	25% {
+		d: path('M-10, 440 C300, 423, 399, 400, 620, 220 V640, 460  Z');
+	}
+	
+	50% {
+		d: path('M-10, 440 C300, 423, 399, 400, 600, 200 V600, 440  Z');
+	}
+
+	75% {
+		d: path('M-10, 440 C300, 423, 399, 400, 580, 180 V600, 440  Z');
+	}
+
+	100% {
+		d: path('M-10, 440 C300, 423, 399, 400, 600, 200 V600, 440  Z');
+	}
+
+}
+
+@-webkit-keyframes changePath {
+	0% {
+		d: path('M0, 437 C300, 420, 399, 395, 570, 225');
+	}
+
+	25% {
+		d:path('M0, 437 C300, 420, 399, 395, 580, 250');
+	}
+
+	50% {
+		d: path('M0, 437 C300, 420, 399, 395, 570, 225');
+	}
+
+	75% {
+		d: path('M0, 437 C300, 420, 399, 395, 560, 200');
+	}
+
+	100% {
+		d: path('M0, 437 C300, 420, 399, 395, 570, 225');
+	}
+
+}
+
+@keyframes changePath {
+	0% {
+		d: path('M0, 437 C300, 420, 399, 395, 570, 225');
+	}
+
+	25% {
+		d:path('M0, 437 C300, 420, 399, 395, 580, 250');
+	}
+
+	50% {
+		d: path('M0, 437 C300, 420, 399, 395, 570, 225');
+	}
+
+	75% {
+		d: path('M0, 437 C300, 420, 399, 395, 560, 200');
+	}
+
+	100% {
+		d: path('M0, 437 C300, 420, 399, 395, 570, 225');
+	}
+
+}
+
+
+
+@-webkit-keyframes dash {
+	from {
+		stroke-dashoffset: 1050;
+	}
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+
+
+@keyframes dash {
+	from {
+		stroke-dashoffset: 1050;
+	}
+	to {
+		stroke-dashoffset: 0;
 	}
 }

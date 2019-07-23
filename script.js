@@ -218,4 +218,19 @@ requestAnimationFrame(moveRocket);
 
 setTimeout(rocketFlight, 4000);
 
-/*-------------------------------------------------------------------*/
+var showClearGamePopup = function () {
+  var clearGameOpenBtn = document.getElementById('clear-game-button');
+      clearGameWrapper = document.getElementsByClassName('clear-game-wrapper')[0];
+      clearGameCloseBtn = document.getElementsByClassName('clear-game-closeBtn')[0];
+
+  clearGameOpenBtn.addEventListener("click", function () {
+    clearGameWrapper.classList.remove('disactive');
+
+  })
+
+  clearGameCloseBtn.addEventListener('click', function () {
+    clearGameWrapper.classList.add('disactive');
+  })
+}
+
+

@@ -12,7 +12,7 @@
 		<div id="logo-block" class="flex-row">
 			<div id="logo"></div>
 			<div id="clear-game" class="flex-row">
-				<div id="clear-game-button" class="flex-row">
+				<div id="clear-game-button" class="flex-row" onclick="showClearGamePopup()">
 					<p>Честная игра 100%</p>
 					<div></div>
 				</div>
@@ -281,6 +281,42 @@
 
 	<div class="all-bets-popup">	
 	</div>
+
+
+	<div class="clear-game-wrapper disactive">
+		<div class="clear-game-popup flex-column">
+			<div class="clear-game-popup-head flex-row">
+				<div>ЧТО ТАКОЕ ЧЕСТНАЯ ИГРА?</div>
+				<div class="clear-game-closeBtn flex-row">
+					<span>+</span>
+				</div>
+			</div>
+			<div class="clear-game-popup-body flex-row">
+				<div class="popup-left-side flex-column">
+					<div class="left-side-images flex-row">
+						<div>ЧЕСТНАЯ ИГРА 100%</div>
+					</div>
+				</div>
+				<div class="popup-right-side flex-column">
+					<div class="first-text-block">
+						"Космолот" - это игра, основанная на криптографических технологиях под названием "Честная игра" (Provably Fair). Эта технология гарантирует 100% справедливость игрового результата и препятствует любому влиянию третьих лиц в процесс игры.
+					</div>
+					<h2>КАК ЭТО РАБОТАЕТ</h2>
+					<div class="second-text-block">Результат раунда (коэффициент игры "Космолот") генерируется на основании раундов, в которых игроки делали ставки, и является полностью прозрачным. Это значит, что манипулировать игрой невозможно. При этом, любой игрок может проверить и подтвердить честность игры.
+					</div>
+					<h2>ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ</h2>
+					<div class="third-text-block">
+						Результат раунда генерируется четырьма независимыми участниками раунда: оператором игры и первыми тремя участниками раунда. Оператор генерирует уникальный идентификатор на стороне сервера (случайные 16 символов). Хешированная версия этого уникального идентификатора существует в публичном доступе перед началом раунда (пройдите во вкладку "Настройки честной игры" в меню пользователя и найдите опцию  "Следующий уникальный идентификатор SHA256"). Уникальный идентификатор на стороне игрока генерируется каждым игроком и когда начинается раунд, первые три игрока, которые поставили ставки, генерируют результат раунда.
+					</div>
+					<div class="scheme-block"></div>
+					<div class="fourth-text-block"></div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+
 	<script src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js" integrity="sha256-VV47uJSoHZUeiBcCs3FcBOQLMn++yeG/zqZvaUkvGZM=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js" integrity="sha256-nuhNsfXzBFR6G1lKP8bK77dakkQDqdHcQ4OCFZvk6Qo=" crossorigin="anonymous"></script>
