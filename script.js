@@ -137,7 +137,7 @@ timePeriodInMs);
 
  var count = 400;
     
-    var counter = setInterval(timer, 10); //10 will  run it every 100th of a second
+    var counter = setInterval(timer, 10); 
     
     function timer()
     {
@@ -164,23 +164,16 @@ var rocketFlight = function() {
 
 var counterSvg = 0;
 
-/*  A boolean variable to keep track of the direction we want to travel in 
-  true = move to the left, false move to the right */
 var direction = true;
 
-/*  First get a reference to the enclosing div and then to
-  the 2 svg paths */
 var svgContainer = document.getElementById("outerWrapper");
 var ns = "http://www.w3.org/2000/svg";
 var svg = svgContainer.getElementsByTagNameNS(ns, "path");
-/*  the var 'svg' contains a reference to two paths so svg.length = 2
-  svg[0] is the straight line and svg[1] is the curved lines */
 
-/*  Now get the length of those two paths */
 
 var curveLength = svg[0].getTotalLength();
 
-/*  Also get a reference to the two star polygons */
+
 
 var rockets = svgContainer.querySelector("#rocketRect");
 
@@ -188,28 +181,24 @@ setTimeout(moveRocket,5000)
 
 
 function moveRocket() {
-  /*  Check to see where the stars are journeys to determibne 
-    what direction they should be travelling in */
+
   if (parseInt(counterSvg,10) === 1) {
-    /* we've hit the end! */
+
     direction = false;
   } else if (parseInt(counterSvg,10) < 0) {
-    /* we're back at the start! */
+
     direction = true;
   }
 
-  /*  Based on the direction variable either increase or decrease the counter */
+
   if (direction) {
     counterSvg += 0.0035;
   } 
 
-  /*  Now the magic part. We are able to call .getPointAtLength on the tow paths to return 
-    the coordinates at any point along their lengths. We then simply set the stars to be positioned 
-    at these coordinates, incrementing along the lengths of the paths */
+  
   
   rockets.setAttribute("transform","translate("+ (svg[0].getPointAtLength(counterSvg * curveLength).x -15)  + "," + (svg[0].getPointAtLength(counterSvg * curveLength).y -15) + ")");
-  /*  Use requestAnimationFrame to recursively call moveRocket() 60 times a second
-    to create the illusion of movement */
+
   requestAnimationFrame(moveRocket);
 }
 requestAnimationFrame(moveRocket);
@@ -232,5 +221,7 @@ var showClearGamePopup = function () {
     clearGameWrapper.classList.add('disactive');
   })
 }
+
+showClearGamePopup();
 
 

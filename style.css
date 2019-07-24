@@ -26,8 +26,7 @@ body{
 }
 
 header {
-
-	height: 12vh;
+	height: 90px;
 	background: url(images/transparent-background.png) no-repeat;
 	width: 100%;
 	margin: 0 auto;	
@@ -59,13 +58,14 @@ header {
 
 #clear-game-button {
 	width: 85%;
-	height: 35%;
+	height: 35px;
 	border: 1px solid #2a105a;
 	border-radius: 15px;
 	background-color: #1b0a3a;
 	-ms-grid-row-align: center;
 	    align-self: center;
 	cursor: pointer;
+
 }
 
 #clear-game-button:hover {
@@ -79,12 +79,12 @@ header {
     color: white;
     text-align: center;
     width: 80%;
-    box-sizing: border-box;
-    line-height: 1.4;
+   
+
 }
 
 #clear-game-button div {
-	width: 20%;
+	width: 34px;
 	background: url(images/security.png) no-repeat 0% 50%;
 	background-size: 40%;
 }
@@ -98,7 +98,7 @@ header {
 	-ms-grid-row-align: center;
 	    align-self: center;
 	    width: 30%;
-	    height: 60%;
+	    height: 60px;
 	    border: 1px solid #384eba;
 	    justify-content: space-around;
 	    background-color: #223e9b;
@@ -132,7 +132,7 @@ header {
 	-ms-grid-row-align: center;
 	    align-self: center;
 	width: 32%;
-	height: 35%;
+	height: 35px;
 }
 
 .player-cash-block {
@@ -147,18 +147,17 @@ header {
 	width: 80%;
 	text-align: center;
 	box-sizing: border-box;
-	padding-top: 13px;
+	padding-top: 11px;
 	font-family: "Roboto-Light";
     font-size: 11px;
 }
 
 .add-player-money {
-	width: 14%;
-	height: 65%;
+	width: 24px;
+	height: 24px;
 	-ms-grid-row-align: center;
 	    align-self: center;
 	background: #e4307a;
-	margin-left: 5px;
 	box-sizing: border-box;
 	border-radius: 50%;
 	color: #2a105a;
@@ -693,7 +692,7 @@ input:checked[type="checkbox"]:before {
 	background-color: #e4307a;
 	position: relative;
 	top: 12px;
-	left: 50px;
+	left: 50%;
 	border: 1px solid #e4307a;
 	border-radius: 100%;
 	opacity: 10;
@@ -824,7 +823,7 @@ input:checked[type="checkbox"]:before {
 	background-color: #e4307a;
 	position: relative;
 	top: 12px;
-	left: 50px;
+	left: 50%;
 	border: 1px solid #e4307a;
 	border-radius: 100%;
 	opacity: 10;
@@ -890,7 +889,7 @@ input:checked[type="checkbox"]:before {
 	background-color: #e4307a;
 	position: relative;
 	top: 12px;
-	left: 50px;
+	left: 50%;
 	border: 1px solid #e4307a;
 	border-radius: 100%;
 	opacity: 10;
@@ -1275,7 +1274,6 @@ display: block;
 .clear-game-popup {
 	position: relative;
 	width: 80%;
-	height: 95vh;
 	background-color: #221354;
 	margin:  20px auto;
 	z-index: 15;
@@ -1331,7 +1329,8 @@ display: block;
 .clear-game-popup-body {
 	width: 100%;
 	height: 700px;
-	overflow: auto;
+	display: flex;
+	overflow-y: auto;
 }
 
 .popup-left-side {
@@ -1350,8 +1349,8 @@ display: block;
 }
 
 .left-side-images div {
-	width: 35%;
-	height: 25%;
+	width: 154px;
+	height: 112px;
 	-ms-grid-row-align: center;
 	    align-self: center;
 	text-align: center;
@@ -1368,7 +1367,6 @@ display: block;
 	width: 55%;
 }
 
-
 .first-text-block {
 	margin-top: 40px;
 }
@@ -1376,7 +1374,7 @@ display: block;
 .first-text-block,
 .second-text-block,
 .third-text-block,
-.fourth-text-block {
+.sixth-text-block {
 	width: 100%;
 	color: white;
 	font-family: "Roboto-Light";
@@ -1393,10 +1391,67 @@ h2 {
 }
 
 .scheme-block {
-
 	width: 90%;
 	height: 400px;
 	margin: 40px auto 0 auto;
-	background: no-repeat url('images/clear-game-image2.png') left 45% top 0% / 80%;
+	
 }
 
+.fourth-text-block,
+.fifth-text-block {
+	background-color: #180129;
+	border-radius: 10px;
+	margin: 20px 0 0 40px;
+	justify-content: flex-start;
+	padding-bottom: 10px;
+	box-sizing: border-box;
+}
+
+.fourth-text-block {
+		width: 80%;
+		height: 120px;
+}
+
+h3 {
+	font-family: "Roboto-Regular";
+	font-size: 14px;
+	color: #422894;
+	text-align: center;
+	margin-bottom: 10px;
+
+}
+
+.fourth-text-block span,
+.fourth-text-block div,
+.fifth-text-block span {
+	color: white;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+
+.fourth-text-block span,
+.fifth-text-block span {
+	font-family: "Roboto-Regular";
+	font-size: 12px;
+}
+
+.fourth-text-block div {
+	font-family: "Roboto-Light";
+	font-size: 12px;
+	width: 90%;
+	-ms-grid-row-align: center;
+	    align-self: center;
+}
+
+.empty-text-block {
+	width: 100px;
+	height: 750px;
+	border: 1px solid green;
+}
+
+.fifth-text-block {
+	width: 80%;
+	height: 80px;
+	text-align: center;
+}
