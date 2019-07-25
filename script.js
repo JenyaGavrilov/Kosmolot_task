@@ -225,3 +225,12 @@ var showClearGamePopup = function () {
 showClearGamePopup();
 
 
+var showCashOut = function() {
+  var cashOutPopup = document.getElementsByClassName('cashOut-wrapper')[0];
+  var closeCashOut = document.getElementsByClassName('cashOut-closeBtn')[0];
+  cashOutPopup.classList.remove('disactive');
+
+  closeCashOut.addEventListener('click', function() {
+    cashOutPopup.classList.add('disactive');
+  })
+}
