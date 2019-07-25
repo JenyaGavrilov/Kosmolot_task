@@ -234,3 +234,14 @@ var showCashOut = function() {
     cashOutPopup.classList.add('disactive');
   })
 }
+
+var showNetworkError = function () {
+  var networkErrorPopup = document.getElementsByClassName('network-error-popup')[0];
+      errorCloseBtn = document.getElementsByClassName('error-closeBtn')[0];
+
+      networkErrorPopup.classList.remove('disactive');
+
+      errorCloseBtn.addEventListener('click', function() {
+        networkErrorPopup.classList.add('disactive');
+      })
+}  
