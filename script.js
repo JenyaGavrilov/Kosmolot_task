@@ -245,3 +245,11 @@ var showNetworkError = function () {
         networkErrorPopup.classList.add('disactive');
       })
 }  
+
+var flightAway = function() {
+  var outerWrapper = document.getElementsByClassName('outerWrapper')[0];
+  var flightAwayPopup = document.getElementsByClassName('flight-away-popup')[0];
+
+      outerWrapper.classList.add('disactive');
+      flightAwayPopup.classList.remove('disactive');
+}
