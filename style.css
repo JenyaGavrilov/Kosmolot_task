@@ -158,15 +158,20 @@ header {
 	-ms-grid-row-align: center;
 	    align-self: center;
 	background: #e4307a;
-	box-sizing: border-box;
 	border-radius: 50%;
 	color: #2a105a;
 	text-align: center;
-	line-height: 1.4;
 	font-family: "Roboto-Regular";
 	font-weight: 300;
 	font-size: 18px;
+	justify-content: center;
 }
+
+.add-player-money span {
+	-ms-grid-row-align: center;
+	    align-self: center;
+}
+
 
 .add-player-money:hover {
 	cursor: pointer;
@@ -237,7 +242,7 @@ header {
 	border: 1px solid #2a105a;
 	border-radius: 20px;
 	background-color: #180732;
-	height: 71%;
+	height: 480px;
 	display: flex;
 	justify-content: center;
 	overflow: hidden;
@@ -246,7 +251,7 @@ header {
 
 .rocket-animation-block {
 	width: 95%;
-	height: 87%;
+	height: 391px;
 	border: 1.5px solid #240d4c;
 	-ms-grid-row-align: center;
 	    align-self: center;
@@ -1218,6 +1223,7 @@ display: block;
 	margin: 0 auto 140px auto;
 	position: relative;
 	top: 120px;
+	text-align: center;
 
 }
 
